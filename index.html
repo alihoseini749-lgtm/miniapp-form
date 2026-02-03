@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم سفارش</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    button {
+      padding: 16px 32px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #0088cc;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #005f8c;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h1>فرم سفارش</h1>
+<button onclick="openForm()">باز کردن فرم</button>
+<p>با فشار دادن دکمه، فرم گوگل در مرورگر باز می‌شود.</p>
+
+<script>
+  const tg = window.Telegram.WebApp;
+  tg.ready();
+
+  function openForm() {
+    tg.openLink("https://forms.gle/j2cyEZxTP3n4f8yA6");
+  }
+</script>
+
+</body>
+</html>
